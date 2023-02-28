@@ -3,6 +3,8 @@
 // * Porblem-link="https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1"
 
 
+
+
 var arr=[0,1,2,1,2,1,0]
 var N=7;
  function sort012(arr, N)
