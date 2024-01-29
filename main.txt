@@ -1,0 +1,23 @@
+* Algorithm:
+- An algorithm is a step-by-step procedure or formula for solving a problem or accomplishing a specific task.
+- It is a finite sequence of well-defined, unambiguous instructions or rules that specify a sequence of operations 
+  to be carried out in order to produce a solution to a problem.
+- Algorithms are more concerned with the logical and mathematical aspects of problem-solving and may or may not
+  be directly tied to implementation details.
+
+* Data Structure:
+- A data structure is a way of organizing and storing data to perform operations efficiently.
+- It defines the organization of data, the relationships between data elements, and the operations that can be
+  performed on the data.
+- Examples of data structures include arrays, linked lists, trees, graphs, stacks, queues, and hash tables.
+
+* Technique:
+- The term "technique" is more general and can refer to various methods, approaches, or strategies used in problem-solving
+  and programming.
+- Techniques may involve the use of algorithms and data structures, among other things.
+- For example, recursive technique, dynamic programming technique, divide-and-conquer technique are approaches to 
+  problem-solving that may involve specific algorithms and data structures.
+
+In summary, an algorithm is a step-by-step procedure for solving a problem, a data structure is a way of 
+organizing and storing data, and a technique is a general approach or strategy used in problem-solving.
+Algorithms and data structures are often integral components of various problem-solving techniques.

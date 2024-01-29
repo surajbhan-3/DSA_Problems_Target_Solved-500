@@ -1,0 +1,106 @@
+* A function or method is said to be Recursion if it calls itself.
+* Solving a problem (some input) by solving the some problem  on smaller input
+* Recursion is used to break down a big problem into chunks  or simpler sub-problems 
+
+  A reucursive function typically consists of parts 
+   ==> Base case : It serves as a stopping condition for a reucrsive call 
+   ==> Recursive calls : the function call itself on smaller sub-problems  and called itself unless or untill
+                         it won't reach the base condition
+
+* Why Recursion
+
+==> Simplifies Complex Problems: 
+    Recursion is particularly useful for solving problems that can be broken down into smaller, similar sub-problems. 
+    It simplifies the code and makes it more intuitive. Complex problems can often be expressed more concisely and elegantly using recursion.
+
+==> Divide and Conquer:
+    Many algorithms follow a divide-and-conquer strategy, where a problem is divided into smaller sub-problems that 
+    are solved independently. Recursion is a natural fit for such scenarios, as it allows you to express the solution
+    in a way that mirrors the problem's structure.
+
+==> Code Readability:
+    Recursive solutions often result in more readable and clean code, making it easier to understand the logic of 
+    the algorithm. This can be especially beneficial for solving problems related to trees, graphs, and other hierarchical 
+    structures.
+
+==> Mathematical Expressions:
+    Recursive functions are well-suited for problems that can be naturally expressed using mathematical recursion, 
+    such as calculating factorials, Fibonacci numbers, and solving certain mathematical equations.
+
+==> Appropriate for Tree and Graph Structures:
+    Recursive algorithms are commonly used for traversing and manipulating tree and graph structures. 
+    The recursive approach is natural when dealing with hierarchical data.
+
+==> Dynamic Programming:
+    Recursion is often a fundamental concept in dynamic programming, where a problem is solved by breaking it 
+    down into smaller overlapping sub-problems. Recursive solutions can be memoized to avoid redundant calculations,
+    resulting in optimized algorithms.
+
+==> Function Decomposition:
+    Recursion allows for the decomposition of a complex problem into simpler, manageable parts. Each recursive
+    call works on a smaller subset of the original problem, contributing to a more modular and organized code structure.
+
+However, it's important to note that recursion may not always be the most efficient solution, and in some cases, 
+it can lead to stack overflow errors if not implemented carefully. Additionally, certain problems might have more
+straightforward iterative solutions. The choice between recursion and iteration depends on the specific characteristics
+of the problem and the programming language being used.
+
+
+* Time Complexity:
+
+  ==> The time complexity of a recursive algorithm is often expressed using Big O notation.
+  ==> If the recursive algorithm involves breaking down a problem into smaller sub-problems, and the number of sub-problems     grows exponentially with the input size, the time complexity can be high.
+  ==> However, if the recursive algorithm employs techniques like memoization or dynamic programming to avoid 
+      redundant calculations, it may lead to improved time complexity.
+
+* Space Complexity:
+
+  ==> The space complexity of a recursive algorithm refers to the amount of memory required to execute
+      the algorithm, particularly with respect to the call stack.
+  ==> Each recursive call typically adds a new frame to the call stack, consuming memory.
+  ==> If the depth of the recursion is proportional to the input size (e.g., in tree traversal), 
+      the space complexity can be O(log n) for balanced recursive calls.
+  ==> In some cases, if there are multiple recursive calls at each level (e.g., in certain divide-and-conquer algorithms),
+      the space complexity might be O(n), where 'n' is the input size.
+
+
+
+=> Time Complexity: O(n) - There are 'n' recursive calls, each taking constant time.
+=> Space Complexity: O(n) - The maximum depth of the call stack is 'n' because there are 'n' recursive calls.
+=> It's worth noting that not all recursive algorithms have the same time and space complexity. 
+   The characteristics of the specific problem and the way the recursion is implemented influence these complexities.
+   Techniques like memoization and dynamic programming can significantly impact the efficiency of recursive algorithms, 
+   reducing time complexity by avoiding redundant calculations.
+
+
+
+   Example
+     function fibonacci(n) {
+         if (n <= 1) {
+            return n;
+        } else {
+           return fibonacci(n - 1) + fibonacci(n - 2);
+         }
+    }
+
+
+const result = fibonacci(5);
+console.log(result); // Output: 5
+
+
+==> The base case is when n is 0 or 1, where the function returns n.
+    The recursive case involves calling the fibonacci function twice for smaller values, leading to a
+    binary tree of recursive calls.
+    The time complexity of this Fibonacci function without memoization is approximately O(2^n). 
+    Each recursive call results in two additional calls,leading to an exponential growth in the number of function calls.
+
+
+==> The space complexity of the provided Fibonacci function without memoization is determined by the maximum depth 
+    of the call stack during its execution. In this case, the space complexity is O(n),
+    where 'n' is the input to the Fibonacci function.
+
+   Each recursive call to the fibonacci function adds a new frame to the call stack.
+   The maximum depth of the call stack will be 'n' in this case because the function is called recursively 'n' times,
+   corresponding to the input value. This is because each call branches into two more calls (one for fibonacci(n - 1) and
+   one for fibonacci(n - 2)), forming a binary tree of recursive calls.
+   Therefore, the space complexity is O(n), where 'n' is the input value for which we are calculating the Fibonacci number.
